@@ -153,16 +153,45 @@ public class SolutionOutline {
 		}		
 	}
 	
-	
+	// builds a sorted list of ListNodes from 1 to the number of nodes wanted
 	public ListNode buildOrderedList(int n) {
 		ListNode head = new ListNode(1);		
 		ListNode pointer = head;
-		for (int x = 2; x <= n; x++) {
-			pointer.next = new ListNode(x);
+		for (int x = 2; x <= n; x++) {					
+			pointer.next = new ListNode(x);			
 			pointer = pointer.next;
 		}
 		
 		return head;
+	}
+	
+	// builds a sorted list of ListNodes with each value caped at a given max 
+	public ListNode buildOrderedList(int n, int max) {
+		
+		int[] nums = new int[n];
+		for (int x = 0; x < n; x++) {
+			nums[x] = (int) (Math.random()*max);
+		}
+		
+		Arrays.sort(nums);
+		ListNode head = new ListNode(nums[0]);		
+		ListNode pointer = head;
+		for (int x = 1; x < n; x++) {					
+			pointer.next = new ListNode(nums[x]);			
+			pointer = pointer.next;
+		}
+		
+		return head;
+	}
+	
+	public String printLists(ListNode[] lists) {
+		String answer = "";
+		
+		for (ListNode list: lists) {
+			answer += list.printVal() + "\n\t";
+		}
+		
+		return answer;
 	}
 	
 	public class ListNode {
