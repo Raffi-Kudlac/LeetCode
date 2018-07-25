@@ -6,14 +6,14 @@ import helper.SolutionOutline;
  * The Idea
  * 		
  * 		Create a new node that will be the beginning of the answer list. (The result of two
- * 		merged lists). Loop through two lists at a time and at the minimum of the heads of each
- * 		list to the answer list. Take the minimum out of one list and put it into the answer list.
+ * 		merged lists). Loop through two lists. Have a pointer at the head of each list. (So two pointers) 
+ * 		Take the minimum out of the two pointers and add that node to the answer list. Remove the minimum from the
+ * 		list where it currently was. (move the node from its current list to the answer list)
  * 		Do this until both lists now exist in the master list.
  *  
  * @author Raffi Kudlac
  *
  */
-
 
 public class MergeKLists extends SolutionOutline {
 		
