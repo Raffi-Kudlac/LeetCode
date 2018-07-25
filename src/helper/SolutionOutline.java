@@ -184,6 +184,18 @@ public class SolutionOutline {
 		return head;
 	}
 	
+	
+	public ListNode buildUnorderedList(int n, int max) {
+		ListNode head = new ListNode((int) (Math.random()*max));		
+		ListNode pointer = head;
+		for (int x = 2; x <= n; x++) {					
+			pointer.next = new ListNode((int) (Math.random()*max));			
+			pointer = pointer.next;
+		}
+		
+		return head;
+	}
+	
 	public String printLists(ListNode[] lists) {
 		String answer = "";
 		
