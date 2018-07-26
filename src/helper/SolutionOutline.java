@@ -184,6 +184,16 @@ public class SolutionOutline {
 		return head;
 	}
 	
+	public int[] buildOrderedArray(int n, int max) {
+		
+		int[] array = new int[n];
+		
+		for (int index = 0; index < n; index++) {
+			array[index] = (int) (Math.random()*max);
+		}
+		Arrays.sort(array);
+		return array;
+	}
 	
 	public ListNode buildUnorderedList(int n, int max) {
 		ListNode head = new ListNode((int) (Math.random()*max));		
@@ -287,6 +297,10 @@ public class SolutionOutline {
 
 	public void setOutput(String output) {
 		this.output = output;
+	}
+	
+	public void setOutput(double output) {
+		this.output = Double.toString(output);
 	}
 	
 	public void setOutput(List<List<Integer>> list) {
