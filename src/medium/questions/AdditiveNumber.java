@@ -13,7 +13,8 @@ public class AdditiveNumber extends SolutionOutline {
 		this.setOutput(answer);
 		this.printResult();
 	}
-
+	
+	// https://leetcode.com/problems/additive-number/description/
 	public boolean solution(String num) {
 
 		for (int firstNum = 1; firstNum < num.length() - 2; firstNum++) {
@@ -59,5 +60,4 @@ public class AdditiveNumber extends SolutionOutline {
 
 		return true;
 	}
-
 }
