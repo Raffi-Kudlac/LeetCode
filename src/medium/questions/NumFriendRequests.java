@@ -16,6 +16,7 @@ public class NumFriendRequests extends SolutionOutline {
 		this.printResult();
 	} 
 	
+	// https://leetcode.com/problems/friends-of-appropriate-ages/description/
 	public int solution(int ages[]) {
 		Arrays.sort(ages);
         
