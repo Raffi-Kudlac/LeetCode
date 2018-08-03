@@ -266,6 +266,10 @@ public class SolutionOutline {
 	public String getInput() {
 		return input;
 	}
+
+	public void setInput(int[][] input) {
+		this.input = TwoDIntArrayToStirng(input);
+	}
 	
 	public void setInput(int input) {
 		this.input = Integer.toString(input);
@@ -277,6 +281,10 @@ public class SolutionOutline {
 	
 	public void setInput(String input) {
 		this.input = input;
+	}
+
+	public void setOutput(int[][] output) {
+		this.output = TwoDIntArrayToStirng(output);
 	}
 
 	public void setOutput(int[] output) {
