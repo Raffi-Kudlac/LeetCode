@@ -56,8 +56,7 @@ public class LadderLength  extends SolutionOutline{
 		}		
 		
 		GraphPath<String, DefaultEdge> shortestPath = DijkstraShortestPath.findPathBetween(g, start, finish);
-		List<String> list = shortestPath.getVertexList();		
-		
+		List<String> list = shortestPath.getVertexList();
 		return list;
 	}
 	

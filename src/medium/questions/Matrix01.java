@@ -6,6 +6,13 @@ import java.util.Arrays;
 
 public class Matrix01 extends SolutionOutline {
 
+    /**
+     * Idea
+     *      https://leetcode.com/problems/01-matrix/solution/
+     *      Solution #3
+     */
+
+
     public void runTest() {
         this.setClassName("Matrix01");
         this.setDifficulty("Medium");
@@ -38,11 +45,12 @@ public class Matrix01 extends SolutionOutline {
         return matrix;
     }
 
+    // https://leetcode.com/problems/01-matrix/description/
     public int[][] solution(int[][] matrix) {
 
         int[][] answer = new int[matrix.length][matrix[0].length];
 
-        for (int[] arr: matrix) {
+        for (int[] arr: answer) {
             Arrays.fill(arr, Integer.MAX_VALUE - 1);
         }
 
@@ -55,31 +63,31 @@ public class Matrix01 extends SolutionOutline {
                     continue;
                 }
 
-                if (y + 1 < matrix[x].length) {
-                    answer[x][y] = Math.min(answer[x][y], answer[x][y + 1] + 1);
+                if (y > 0) {
+                    answer[x][y] = Math.min(answer[x][y], answer[x][y - 1] + 1);
                 }
 
-                if (x + 1 < matrix.length) {
-                    answer[x][y] = Math.min(answer[x][y], answer[x + 1][y] + 1);
+                if (x > 0) {
+                    answer[x][y] = Math.min(answer[x][y], answer[x - 1][y] + 1);
                 }
             }
         }
 
         // pass from bottom right to top left
         for (int x = matrix.length - 1; x >= 0; x--) {
-            for (int y = matrix[x].length; y >= 0; y--) {
+            for (int y = matrix[x].length - 1; y >= 0; y--) {
 
                 if (matrix[x][y] == 0) {
                     answer[x][y] = 0;
                     continue;
                 }
 
-                if (y - 1 >= 0) {
-                    answer[x][y] = Math.min(answer[x][y], answer[x][y - 1] + 1);
+                if (y + 1 < matrix[x].length) {
+                    answer[x][y] = Math.min(answer[x][y], answer[x][y + 1] + 1);
                 }
 
-                if (x - 1 >= 0) {
-                    answer[x][y] = Math.min(answer[x][y], answer[x - 1][y] + 1);
+                if (x + 1 < matrix.length) {
+                    answer[x][y] = Math.min(answer[x][y], answer[x + 1][y] + 1);
                 }
             }
         }

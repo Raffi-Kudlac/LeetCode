@@ -28,7 +28,7 @@ public class FindAnagrams extends SolutionOutline {
         HashMap<Character, Integer> pCounter = new HashMap<Character, Integer>();
         char[] charArray = anagram.toCharArray();
         for (char c : charArray) {
-            Character cObject = new Character(c);
+            Character cObject = c;
             if (pCounter.containsKey(cObject)) {
             	
                 pCounter.put(cObject, pCounter.get(cObject) + 1);                
@@ -52,7 +52,7 @@ public class FindAnagrams extends SolutionOutline {
 		HashMap<Character, Integer> pCounter = new HashMap<Character, Integer>();
         char[] charArray = anagram.toCharArray();
         for (char c : charArray) {
-            Character cObject = new Character(c);
+            Character cObject = c;
             if (pCounter.containsKey(cObject)) {            	
                 pCounter.put(cObject, pCounter.get(cObject) + 1);                
             } else {
@@ -66,7 +66,7 @@ public class FindAnagrams extends SolutionOutline {
 	public boolean check(String s, String p, HashMap<Character, Integer> pCount) {
         Character c;                    
         for (int x = 0; x < s.length(); x++) {
-            c = new Character(s.charAt(x));
+            c = s.charAt(x);
 
             if (pCount.containsKey(c)) {
                 int counter = pCount.get(c);
