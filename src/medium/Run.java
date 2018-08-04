@@ -1,13 +1,13 @@
 package medium;
 
 import helper.SolutionOutline;
-import medium.questions.Matrix01;
+import medium.questions.*;
 
 public class Run {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		SolutionOutline solution = new Matrix01();
+		SolutionOutline solution = new LengthOfLongestSubString();
 		solution.runTest();				
 	}
 }
