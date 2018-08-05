@@ -14,9 +14,9 @@ public class ReconstructQueue extends SolutionOutline {
 		this.setDifficulty("Medium");
 		
 		int[][] test = buildData();		
-		this.setInput(TwoDIntArrayToStirng(test));
+		this.setInput(TwoDIntArrayToString(test));
 		int[][] answer = this.solution(test);
-		this.setOutput(TwoDIntArrayToStirng(answer));
+		this.setOutput(TwoDIntArrayToString(answer));
 		this.printResult();
 	}
 	

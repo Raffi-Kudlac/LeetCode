@@ -32,7 +32,7 @@ public class SolutionOutline {
 		return "";
 	}		
 	
-	public String TwoDCharArrayToStirng(char[][] array) {
+	public String TwoDCharArrayToString(char[][] array) {
 		String answer = "";
 		
 		for (char[] data: array) {
@@ -42,7 +42,7 @@ public class SolutionOutline {
 		return answer;
 	}
 	
-	public String TwoDIntArrayToStirng(int[][] array) {
+	public String TwoDIntArrayToString(int[][] array) {
 		String answer = "";
 		
 		for (int[] data: array) {
@@ -136,7 +136,6 @@ public class SolutionOutline {
 		}
 	}
 	
-	
 	public TreeNode findNode(TreeNode node, int val) {
 		if (node == null) {
 			return null;
@@ -194,7 +193,8 @@ public class SolutionOutline {
 		Arrays.sort(array);
 		return array;
 	}
-	
+
+	// builds an unordered list n long with each node caped at max
 	public ListNode buildUnorderedList(int n, int max) {
 		ListNode head = new ListNode((int) (Math.random()*max));		
 		ListNode pointer = head;
@@ -268,7 +268,7 @@ public class SolutionOutline {
 	}
 
 	public void setInput(int[][] input) {
-		this.input = TwoDIntArrayToStirng(input);
+		this.input = TwoDIntArrayToString(input);
 	}
 	
 	public void setInput(int input) {
@@ -284,7 +284,7 @@ public class SolutionOutline {
 	}
 
 	public void setOutput(int[][] output) {
-		this.output = TwoDIntArrayToStirng(output);
+		this.output = TwoDIntArrayToString(output);
 	}
 
 	public void setOutput(int[] output) {

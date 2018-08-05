@@ -10,9 +10,9 @@ public class MineSweeper extends SolutionOutline {
 		this.setDifficulty("Medium");
 		
 		char[][] test = getTestBoard();		
-		this.setInput(TwoDCharArrayToStirng(test));
+		this.setInput(TwoDCharArrayToString(test));
 		this.solution(test, new int[] {1, 2});
-		this.setOutput(TwoDCharArrayToStirng(test));
+		this.setOutput(TwoDCharArrayToString(test));
 		this.printResult();
 	}
 	
