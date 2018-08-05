@@ -12,7 +12,7 @@ public class CourseSchedule extends SolutionOutline {
 		this.setDifficulty("Medium");
 		
 		int[][] test = buildCourseSchedule();		
-		this.setInput(TwoDIntArrayToStirng(test));
+		this.setInput(TwoDIntArrayToString(test));
 		boolean answer = this.solution(4, test);
 		this.setOutput(answer);
 		this.printResult();

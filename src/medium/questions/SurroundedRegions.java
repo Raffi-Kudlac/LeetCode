@@ -9,8 +9,8 @@ public class SurroundedRegions extends SolutionOutline {
 		this.setDifficulty("Medium");
 		
 		char[][] board = buildBoard();
-		this.setInput(TwoDCharArrayToStirng(board));
-		String answer = TwoDCharArrayToStirng(this.solution(board));
+		this.setInput(TwoDCharArrayToString(board));
+		String answer = TwoDCharArrayToString(this.solution(board));
 		this.setOutput(answer);
 		this.printResult();
 	} 
