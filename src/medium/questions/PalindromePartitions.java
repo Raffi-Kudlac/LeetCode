@@ -3,6 +3,7 @@ package medium.questions;
 import helper.SolutionOutline;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PalindromePartitions extends SolutionOutline {
 
@@ -12,19 +13,19 @@ public class PalindromePartitions extends SolutionOutline {
 
         String test = "aab";
         this.setInput(test);
-        ArrayList<ArrayList<String>> answer = this.solution(test);
+        List<List<String>> answer = this.solution(test);
         this.setOutput(TwoDStringListToString(answer));
         this.printResult();
     }
 
     // https://leetcode.com/problems/palindrome-partitioning/description/
-    public ArrayList<ArrayList<String>> solution(String s) {
-        ArrayList<ArrayList<String>> answer = new ArrayList<>();
+    public List<List<String>> solution(String s) {
+        List<List<String>> answer = new ArrayList<>();
         check(answer, s, new ArrayList(), 0);
         return answer;
     }
 
-    public void check(ArrayList<ArrayList<String>> answer, String s,
+    public void check(List<List<String>> answer, String s,
                       ArrayList<String> current, int start) {
         if (start == s.length()) {
             answer.add(new ArrayList<>(current));
