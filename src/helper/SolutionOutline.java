@@ -114,8 +114,7 @@ public class SolutionOutline {
 		}		
 		answer = answer.substring(0, answer.length()-1);
 		return answer;
-	}	
-	
+	}
 	
 	public void parse(TreeNode node, int pos, ArrayList<String> data) {
 		
@@ -321,6 +320,26 @@ public class SolutionOutline {
 
 	public void setDifficulty(String difficulty) {
 		this.difficulty = difficulty;
-	}	
+	}
+
+	public boolean isPalindrome(String s) {
+
+		for (int x = 0; x < s.length()/2; x++) {
+			if (s.charAt(x) != s.charAt(s.length() - x - 1)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public String TwoDStringListToString(List<ArrayList<String>> lists) {
+		String answer = "";
+
+		for (List<String> l2: lists) {
+			answer += Arrays.toString(l2.toArray()) + "\n\t";
+		}
+
+		return answer;
+	}
 }
 
