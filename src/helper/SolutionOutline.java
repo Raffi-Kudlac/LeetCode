@@ -332,7 +332,7 @@ public class SolutionOutline {
 		return true;
 	}
 
-	public String TwoDStringListToString(List<ArrayList<String>> lists) {
+	public String TwoDStringListToString(List<List<String>> lists) {
 		String answer = "";
 
 		for (List<String> l2: lists) {
