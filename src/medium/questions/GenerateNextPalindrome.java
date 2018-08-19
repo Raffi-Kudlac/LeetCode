@@ -44,6 +44,4 @@ public class GenerateNextPalindrome extends SolutionOutline {
 		
 		return Character.getNumericValue(n.charAt(index));
 	}
-	
-
 }
