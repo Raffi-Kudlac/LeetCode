@@ -6,7 +6,6 @@ import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.traverse.ClosestFirstIterator;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -45,8 +44,6 @@ public class BusRoutes extends SolutionOutline {
     public void getNeighbours(
             DefaultDirectedGraph<Integer, Connection> g,
             Integer vertex) {
-        ArrayList<String> list = new ArrayList<String>();
-
 
         ClosestFirstIterator<Integer, Connection> neighbours =
                 new ClosestFirstIterator<>(g, vertex, 1);
