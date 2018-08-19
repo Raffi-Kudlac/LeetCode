@@ -21,7 +21,7 @@ public class PalindromePartitions extends SolutionOutline {
     // https://leetcode.com/problems/palindrome-partitioning/description/
     public List<List<String>> solution(String s) {
         List<List<String>> answer = new ArrayList<>();
-        check(answer, s, new ArrayList(), 0);
+        check(answer, s, new ArrayList<>(), 0);
         return answer;
     }
 
