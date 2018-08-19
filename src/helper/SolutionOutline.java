@@ -42,6 +42,16 @@ public class SolutionOutline {
 		return answer;
 	}
 	
+	public String TwoDStringArrayToString(String[][] array) {
+		String answer = "";
+		
+		for (String[] data: array) {
+			answer += Arrays.toString(data) + "\n\t";
+		}
+		
+		return answer;
+	}
+	
 	public String TwoDIntArrayToString(int[][] array) {
 		String answer = "";
 		
