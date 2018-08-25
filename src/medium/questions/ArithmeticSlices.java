@@ -15,6 +15,8 @@ public class ArithmeticSlices extends SolutionOutline {
 		this.printResult();
 	} 
 	
+	
+	// https://leetcode.com/problems/arithmetic-slices/description/
 	public int solution(int[] A) {
 		
 		int[] dp = new int[A.length];

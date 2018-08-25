@@ -14,6 +14,7 @@ public class StoneGame extends SolutionOutline {
 		this.printResult();
 	} 
 	
+	// https://leetcode.com/problems/stone-game/description/
 	public boolean solution(int[] piles) {
 		
 		int[][] dp = new int[piles.length][piles.length];
