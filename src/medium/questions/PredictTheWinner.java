@@ -21,6 +21,7 @@ public class PredictTheWinner extends SolutionOutline {
 		return Predict(nums, 0, nums.length - 1, 1, dp) >= 0;		
 	}
 	
+	// https://leetcode.com/problems/predict-the-winner/description/
 	public int Predict(int[] nums, int left, int right, int turn, Integer[][] dp) {
 		
 		if (left > right) {
