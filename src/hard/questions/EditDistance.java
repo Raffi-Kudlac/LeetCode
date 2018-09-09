@@ -6,7 +6,7 @@ public class EditDistance extends SolutionOutline {
 
     public void runTest() {
         this.setClassName("EditDistance");
-        this.setDifficulty("Medium");
+        this.setDifficulty("Hard");
 
         String word1 = "telivision";
         String word2 = "stokes";
@@ -16,6 +16,7 @@ public class EditDistance extends SolutionOutline {
         this.printResult();
     }
 
+    // https://leetcode.com/problems/edit-distance/description/
     public int solution(String w1, String w2) {
 
         int[][] dp = new int[w1.length() + 1][w2.length() + 1];

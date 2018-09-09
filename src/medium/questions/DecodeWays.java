@@ -38,5 +38,5 @@ public class DecodeWays extends SolutionOutline {
 		}
 				
 		return dp[s.length()];
-	}	
+	}
 }
