@@ -7,7 +7,7 @@ public class Run {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		SolutionOutline solution = new CombinationSum();
+		SolutionOutline solution = new PairsWithSmallestSum();
 		solution.runTest();
 	}
 }
