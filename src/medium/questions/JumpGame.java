@@ -11,7 +11,7 @@ public class JumpGame extends SolutionOutline {
 		this.setClassName("JumpGame");
 		this.setDifficulty("Medium");
 		
-		int[] test = {1, 3, 6, 1, 0, 9};
+		int[] test = {3, 3, 20, 1, 0, 9, 2, 3};
 		//int[] test = {3,2,1,0,4};
 		this.setInput(Arrays.toString(test));
 		
@@ -61,5 +61,4 @@ public class JumpGame extends SolutionOutline {
 		
 		return jumps[jumps.length - 1];
 	}
-	
 }
