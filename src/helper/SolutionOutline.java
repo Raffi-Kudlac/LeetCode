@@ -1,5 +1,7 @@
 package helper;
 
+import easy.questions.SortedArrayToBST;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -240,7 +242,28 @@ public class SolutionOutline {
 			}
 		}
 	}
-	
+
+	public TreeNode buildBST(int size) {
+		int[] nums = new int[size];
+		for (int x = 0; x < size; x++) {
+			nums[x] = x + 1;
+		}
+
+		SortedArrayToBST factory = new SortedArrayToBST();
+		return factory.solution(nums);
+	}
+
+	public TreeNode buildBST(int size, int max) {
+		int[] nums = new int[size];
+		for (int x = 0; x < size; x++) {
+			nums[x] = (int) (Math.random()*max);
+		}
+
+		Arrays.sort(nums);
+		SortedArrayToBST factory = new SortedArrayToBST();
+		return factory.solution(nums);
+	}
+
 	public class TreeNode {
 		 public int val;
 		 public TreeNode left;
