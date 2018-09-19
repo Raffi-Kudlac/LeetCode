@@ -3,6 +3,8 @@ package medium.questions;
 import helper.SolutionOutline;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class ZerosToTheRight extends SolutionOutline {
@@ -34,27 +36,20 @@ public class ZerosToTheRight extends SolutionOutline {
 
     public int[] solution(int[] nums) {
 
-        Stack<Integer> stack = new Stack<>();
+        Queue<Integer> que = new LinkedList<>();
 
+        int element;
         for (int x = 0; x < nums.length; x++) {
-            if (nums[x] == 0) {
-                stack.push(x);
+            element = nums[x];
+            if (element == 0) {
+                que.add(x);
+            } else if (element != 0 && que.size() > 0) {
+                swap(x, que.remove(), nums);
+                que.add(x);
             }
         }
 
-        while (stack.size() > 0) {
-            moveToTheEnd(stack.pop(), nums);
-        }
-
         return nums;
-    }
-
-    public void moveToTheEnd(int start, int[] nums) {
-        int x = start;
-        while (x < nums.length - 1 && nums[x+1] != 0 ) {
-            swap(x, x+1, nums);
-            x++;
-        }
     }
 
     public void swap(int index1, int index2, int[] nums) {
