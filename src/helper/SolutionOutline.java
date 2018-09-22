@@ -18,7 +18,8 @@ public class SolutionOutline {
 		System.out.println("Input: " + "\n\t" + input);
 		System.out.println("Ouput: " + "\n\t" + output);
 	}
-	
+
+	// copy me
 	public void runTest() {
 		this.setClassName("");
 		this.setDifficulty("Medium");
@@ -29,7 +30,8 @@ public class SolutionOutline {
 		this.setOutput(answer);
 		this.printResult();
 	} 
-	
+
+	// copy me
 	public String solution() {
 		return "";
 	}		
